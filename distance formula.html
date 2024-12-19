@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Distance Formula</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <header class = "center top2">
+          
+        </header>
+
+        <body>
+            <div class="navbar">
+                <div class="container">
+                    <a class="logo" href="#">Cal<span>Onl</span></a>
+                    <img id="mobile-cta" class="mobile-menu" src="images/hamburger.jpeg" alt="Open Navigation">
+        
+                    <nav>
+                        <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                        
+                        <ul class="primary-nav">
+                           
+                            <li class="addition-cta"><a href="sum.html">Addition</a></li>
+                            <li class="subtraction-cta"><a href="subtraction.html">Subtraction</a></li>
+                            <li class="Multiplication-cta"><a href="multiplication.html">Multiplication</a></li>
+                            <li class="Division-cta"><a href="division.html">Division</a></li>
+                            <li class="SimpleInterest-cta"><a href="simple interest.html">Simple Interest</a></li>
+                            <li class="CompoundInterest-cta"><a href="compound interest.html">Compound Interest</a></li>
+                            <li class="VolumeSphere-cta"><a href="volume sphere.html">Volume Sphere</a></li>
+                            <li class="Distance-cta"><a href="distance formula.html">Distance Formula</a></li>
+                            <li class="QuadEquation-cta"><a href="quadratic equation.html">Quadratic Equation</a></li>
+                            <li class="Herons-cta"><a href="Heron's formula.html">Heron's Formula</a></li>
+                            <li class="Pythagoras-cta"><a href="pythagors theorem.html">Pythagoras' Theorem</a></li>
+                            
+                            
+                        </section>
+                    </ul>
+                                        
+                        </ul>
+                          
+        
+                        <ul class="secondary-nav">
+                                                    
+             
+        
+                    </nav>
+                </div>
+            </div>
+
+        <!--Seperate boxes for each value and the submit button-->
+        <b class="logo" href="#">Distance<span>Formula</span></b>
+        <table class = "left-top">
+            <tr>
+            <td> <input type="text" name="a" id="a" placeholder="Enter value of x1"/> </td>
+            </tr>
+            <tr>
+            <td> <input type="text" name="b" id="b" placeholder="Enter value of y1 "/> </td>
+            </tr>
+            <tr>
+            <td> <input type="text" name="c" id="c" placeholder="Enter value of x2"/> </td>
+            </tr>
+            <tr>
+            <td> <input type="text" name="d" id="d" placeholder="Enter value of y2"/> </td>
+            </tr>
+            <tr>
+            <td> <button onclick = "distance_formula()" >Submit</button> </td>
+            </tr>
+            </table>
+            <div id="num"> </div>
+            <h4>Formula :</h4>
+            <h3 class = "formula"> distance = √(x2-x1)^2 + (y2-y1)^2 </h3>
+
+    </body>
+
+    <script type = "text/JavaScript">
+        <!--Calculating distance-->
+    
+        function distance_formula()
+        {
+            var x1, y1, x2, y2, a, b, distance;
+            
+            x1 = document.getElementById("a").value;
+            y1 = document.getElementById("b").value;
+            x2 = document.getElementById("c").value;
+            y2 = document.getElementById("d").value;
+            a = parseFloat(x2 - x1);
+            b = parseFloat(y2 - y1);
+            distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+            document.getElementById ('num').innerHTML = "The distance between the two points is: " +distance;
+        }
+        </script>
+        
+</html>

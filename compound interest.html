@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Compound Interest</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <header class = "left-top">
+         
+        </header>
+
+        <body>
+            <div class="navbar">
+                <div class="container">
+                    <a class="logo" href="#">Cal<span>Onl</span></a>
+                    <img id="mobile-cta" class="mobile-menu" src="images/hamburger.jpeg" alt="Open Navigation">
+        
+                    <nav>
+                        <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                        
+                        <ul class="primary-nav">
+                           
+                            <li class="addition-cta"><a href="sum.html">Addition</a></li>
+                            <li class="subtraction-cta"><a href="subtraction.html">Subtraction</a></li>
+                            <li class="Multiplication-cta"><a href="multiplication.html">Multiplication</a></li>
+                            <li class="Division-cta"><a href="division.html">Division</a></li>
+                            <li class="SimpleInterest-cta"><a href="simple interest.html">Simple Interest</a></li>
+                            <li class="CompoundInterest-cta"><a href="compound interest.html">Compound Interest</a></li>
+                            <li class="VolumeSphere-cta"><a href="volume sphere.html">Volume Sphere</a></li>
+                            <li class="Distance-cta"><a href="distance formula.html">Distance Formula</a></li>
+                            <li class="QuadEquation-cta"><a href="quadratic equation.html">Quadratic Equation</a></li>
+                            <li class="Herons-cta"><a href="Heron's formula.html">Heron's Formula</a></li>
+                            <li class="Pythagoras-cta"><a href="pythagors theorem.html">Pythagoras' Theorem</a></li>
+                            
+                            
+                        </section>
+                    </ul>
+                                        
+                        </ul>
+                          
+        
+                        <ul class="secondary-nav">
+                                                    
+             
+        
+                    </nav>
+                </div>
+            </div>
+            
+        <!--Seperate boxes for each value and the submit button-->
+        <b class="logo" href="#">Compound<span>Interest</span></b>
+        <table class = "left-top">
+            <tr>
+            <td> <input type="text" name="a" id="principal" placeholder="Enter principal amount"/> </td>
+            </tr>
+            <tr>
+            <td> <input type="text" name="b" id="time" placeholder="Enter time period "/> </td>
+            </tr>
+            <tr>
+            <td> <input type="text" name="c" id="rate" placeholder="Enter rate of interest"/> </td>
+            </tr>
+            <tr>
+            <td> <input type="text" name="d" id="number" placeholder="Enter number of times interest is compounded"/> </td>
+            </tr>
+            <tr>
+            <td> <button onclick = "compound_interest()" >Submit</button> </td>
+            </tr>
+            </table>
+            <div id="num"> </div>
+            <h4>Formula :</h4>
+            <h3 class = "formula"> CI = p * (1 + r/n)^(t*n) </h3>
+    </body>
+
+    <script type = "text/JavaScript">
+        <!--Calculating Compound Interest-->
+    
+        function compound_interest()
+        {
+            var p, r, t, n, CI, result;
+            
+            p = document.getElementById("principal").value;
+            r = document.getElementById("rate").value;
+            t = document.getElementById("time").value;
+            n = document.getElementById("number").value;
+            CI = p * Math.pow((1 + parseFloat(r/n)),t*n );
+    
+            result = document.getElementById ('num').innerHTML ="Compound interest : " +CI;
+        }
+        </script>
+</html>
